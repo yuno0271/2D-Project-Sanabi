@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Rendering;
 
 public enum CameraType
 {
@@ -61,7 +62,7 @@ public class CameraManager : Singleton<CameraManager>
     public void InitCameraSetting()
     {
         GameObject player = GameObject.FindWithTag("Player");
-        glitch = Camera.main.GetComponent<GlitchEffect>();
+        //glitch = Camera.main.GetComponent<GlitchEffect>();
         cameraBrain = Camera.main.GetComponent<CinemachineBrain>();
 
         if (player == null) return;
