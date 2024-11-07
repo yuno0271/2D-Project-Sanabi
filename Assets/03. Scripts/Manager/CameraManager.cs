@@ -44,7 +44,7 @@ public class CameraManager : Singleton<CameraManager>
     public float OriginBlendTime { get { return originBlendTime; } }
 
     [SerializeField]
-    private GlitchEffect glitch;
+    //private GlitchEffect glitch;
 
     protected override void Awake()
     {
@@ -120,11 +120,11 @@ public class CameraManager : Singleton<CameraManager>
     // 글리치 이펙트 
     public void OnGlitchEffect()
     {
-        glitch.enabled = true;
+        //glitch.enabled = true;
     }
     public void OffGlitchEffect()
     {
-        glitch.enabled = false;
+        //glitch.enabled = false;
     }
 
 

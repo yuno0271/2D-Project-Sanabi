@@ -195,7 +195,7 @@ public class Player : MonoBehaviour
         if (takeDamageRoutine != null)
             StopCoroutine(takeDamageRoutine);
         // 글리치 이펙트 비활성화
-        Camera.main.GetComponent<GlitchEffect>().enabled = false;
+        //Camera.main.GetComponent<GlitchEffect>().enabled = false;
         // 레이어 변경
         gameObject.layer = LayerMask.NameToLayer("Player");
     }
@@ -204,9 +204,9 @@ public class Player : MonoBehaviour
         // 무적상태로 변경
         gameObject.layer = LayerMask.NameToLayer("PlayerInvincible");
         // 카메라 글리치 이펙트
-        Camera.main.GetComponent<GlitchEffect>().enabled = true;
+        //Camera.main.GetComponent<GlitchEffect>().enabled = true;
         yield return new WaitForSeconds(0.3f);
-        Camera.main.GetComponent<GlitchEffect>().enabled = false;
+        //Camera.main.GetComponent<GlitchEffect>().enabled = false;
         yield return new WaitForSeconds(0.2f);
         PrFSM.ChangeState("Idle");
         gameObject.layer = LayerMask.NameToLayer("Player");
